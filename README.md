@@ -1,6 +1,6 @@
 # morpheus — Autonomous Coding Agent. Autonomous coding agent orchestrator
 
-Autonomous Coding Agent. Autonomous coding agent orchestrator. morpheus gives you a focused, inspectable implementation of that idea.
+Autonomous Coding Agent. Autonomous coding agent orchestrator.
 
 ## Why morpheus
 
