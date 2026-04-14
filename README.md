@@ -1,55 +1,54 @@
-# 🔥 Morpheus
+# morpheus — Autonomous Coding Agent. Autonomous coding agent orchestrator
 
-> Orchestrate autonomous coding agents at scale
+Autonomous Coding Agent. Autonomous coding agent orchestrator. morpheus gives you a focused, inspectable implementation of that idea.
 
-[![CI](https://github.com/MukundaKatta/morpheus/actions/workflows/ci.yml/badge.svg)](https://github.com/MukundaKatta/morpheus/actions)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)]()
+## Why morpheus
 
-## What is Morpheus?
+morpheus exists to make this workflow practical. Autonomous coding agent. autonomous coding agent orchestrator. It favours a small, inspectable surface over sprawling configuration.
 
-Morpheus is a Python framework for orchestrating autonomous coding agents. It decomposes complex programming tasks into subtasks, assigns them to specialized agents, manages code generation and review pipelines, and coordinates multi-agent collaboration for software development at scale.
+## Features
 
-## ✨ Features
+- CLI command `morpheus`
+- `TaskStatus` — exported from `src/morpheus/core.py`
+- `Task` — exported from `src/morpheus/core.py`
+- `CodeBlock` — exported from `src/morpheus/core.py`
+- Included test suite
+- Dedicated documentation folder
 
-- ✅ Task decomposition — break complex coding tasks into subtasks
-- ✅ Agent orchestration — manage multiple coding agents in parallel
-- ✅ Code review pipeline — automatic quality checks on generated code
-- ✅ Planning engine — create execution plans from natural language tasks
-- ✅ CLI for running and monitoring coding agents
-- 🔜 Git integration for automatic PR creation
-- 🔜 Multi-language code generation support
+## Tech Stack
 
-## 🚀 Quick Start
+- **Runtime:** Python
+- **Frameworks:** Click
+- **Tooling:** Pydantic, Rich
+
+## How It Works
+
+The codebase is organised into `docs/`, `src/`, `tests/`. The primary entry points are `src/morpheus/core.py`, `src/morpheus/cli.py`, `src/morpheus/__init__.py`. `src/morpheus/core.py` exposes `TaskStatus`, `Task`, `CodeBlock` — the core types that drive the behaviour. `src/morpheus/cli.py` exposes functions like `main`, `plan`, `run`.
+
+## Getting Started
 
 ```bash
 pip install -e .
-morpheus plan "Build a REST API for user management"
-morpheus run "Add pagination to the user list endpoint"
-morpheus status
+morpheus --help
 ```
 
-## 🏗️ Architecture
+## Usage
 
-```mermaid
-graph TD
-    A[User Task] --> B[TaskDecomposer]
-    B --> C[Execution Plan]
-    C --> D[AgentOrchestrator]
-    D --> E[CodingAgent 1]
-    D --> F[CodingAgent 2]
-    D --> G[CodingAgent N]
-    E --> H[ReviewPipeline]
-    F --> H
-    G --> H
-    H --> I[Quality Report]
-    I --> J[Final Output]
+```bash
+morpheus --help
 ```
 
-## 📖 Inspired By
+## Project Structure
 
-Inspired by [Devin](https://devin.ai) and [OpenHands](https://github.com/All-Hands-AI/OpenHands) but focused on orchestration patterns for multiple specialized agents.
-
----
-
-**Built by [Officethree Technologies](https://github.com/MukundaKatta)** | Made with ❤️ and AI
+```
+morpheus/
+├── .env.example
+├── CONTRIBUTING.md
+├── LICENSE
+├── Makefile
+├── README.md
+├── docs/
+├── pyproject.toml
+├── src/
+├── tests/
+```
